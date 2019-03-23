@@ -9,6 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+                <asp:HiddenField ID="hfUserID" runat="server" />
             <table>
                 <tr>
                     <td>
@@ -21,10 +22,10 @@
 
                 <tr>
                     <td>
-                        <asp:Label Text="Last NAme" runat="server" />
+                        <asp:Label Text="Last Name" runat="server" />
                     </td>
                     <td colspan="2">
-                        <asp:TextBox ID="txtLastNAme" runat="server" />
+                        <asp:TextBox ID="txtLastName" runat="server" />
                     </td>
                 </tr>
 
@@ -51,10 +52,10 @@
 
                 <tr>
                     <td>
-                        <asp:Label Text="Adress" runat="server" />
+                        <asp:Label Text="Address" runat="server" />
                     </td>
                     <td colspan="2">
-                        <asp:TextBox ID="txtAdress" runat="server" TextMode="MultiLine" />
+                        <asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine" />
                     </td>
                 </tr>
 
@@ -70,6 +71,7 @@
                     </td>
                     <td colspan="2">
                         <asp:TextBox ID="txtUsername" runat="server" />
+                        <asp:Label Text="*"  runat="server" ForeColor="Black" />
                     </td>
                 </tr>
 
@@ -79,24 +81,37 @@
                     </td>
                     <td colspan="2">
                         <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" />
+                        <asp:Label Text="*"  runat="server" ForeColor="Black" />
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                        <asp:Label Text="Password" runat="server" />
+                        <asp:Label Text="Confirm Password" runat="server" />
                     </td>
                     <td colspan="2">
                         <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password" />
                     </td>
                 </tr>
+                
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <asp:Button Text="Submit" ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" />
+                    </td>
+                </tr>
 
                 <tr>
-                    <td>
-                        <asp:Label Text="text" runat="server" />
-                    </td>
+                    <td></td>
                     <td colspan="2">
-                        <asp:TextBox ID="txt" runat="server" />
+                        <asp:Label Text="" ID="lblSucessMessage" runat="server" ForeColor="Green"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <asp:Label Text="" ID="lblErrorMessage" runat="server" ForeColor="Red"/>
                     </td>
                 </tr>
             </table>
